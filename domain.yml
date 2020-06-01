@@ -1,0 +1,47 @@
+actions:
+- handle_out_of_scope
+- utter_confirm_if_service_is_correct
+- utter_default
+- utter_end
+- utter_goodbye
+- utter_hello
+- utter_welcome
+entities:
+- key
+forms:
+- get_news
+intents:
+- request
+- goodbye
+- affirm
+- greet
+- deny
+- thank_you
+responses:
+  utter_confirm_if_service_is_correct:
+  - text: I hope you found what you were looking for!
+  - text: Is that fine?
+  - text: works?
+  utter_default:
+  - text: Sorry, I did not understand you, please try input something else.
+  utter_goodbye:
+  - text: Bye bye
+  - text: until next time...
+  - text: Later..
+  - text: See you later alligator
+  - text: Ciao
+  - text: come back soon :)
+  utter_hello:
+  - text: Yo! Spike at your service.
+  - text: Hey,ssup? What  can Spike do for you?
+  - text: Hi there! I am Spike.What can I do for you>
+  utter_welcome:
+  - text: You're welcome!
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  key:
+    type: text
+  requested_slot:
+    type: unfeaturized
